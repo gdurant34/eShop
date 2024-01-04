@@ -68,7 +68,7 @@
     font-weight: 800;
 }
 
-.nav_basketCount {
+.nav_itemBasket {
     display: flex;
     align-items: center;
     color: white;
