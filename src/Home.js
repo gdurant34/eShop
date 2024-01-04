@@ -1,8 +1,9 @@
 import React from "react";
 import "./Home.css";
 import Image from "./ecommerce-mcommerce-featured-image-5fd09a3a5ff2a-1520x800.webp";
+import Product from "./Product";
 
-function Home() {
+const Home = () => {
     return (
         <div>
             <div className="home">
