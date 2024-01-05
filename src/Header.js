@@ -1,19 +1,22 @@
 import React from "react";
-import './Header.css';
+import "./Header.css";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import StorefrontIcon from "@mui/icons-material/Storefront";
-import SearchIcon from '@mui/icons-material/Search';
+import SearchIcon from "@mui/icons-material/Search";
+// import { useNavigate } from "react-router-dom";
 
-function Header() { 
-    return (
-        <div className="header">
-            <div className="header_logo">
-        <StorefrontIcon className="header_logoImage" fontSize="large" />
-        <h2 className="header_logoTitle">eShop</h2>
-      </div>
+function Header() {
+  return (
+    <div className="header">
+      <a href="/" style={{ textDecoration: "none" }}>
+        <div className="header_logo">
+          <StorefrontIcon className="header_logoImage" fontSize="large" />
+          <h2 className="header_logoTitle">eShop</h2>
+        </div>
+      </a>
       <div className="header_search">
-        <input type="text" className="header_searchInput"/>
-        <SearchIcon className="header_searchIcon"/>
+        <input type="text" className="header_searchInput" />
+        <SearchIcon className="header_searchIcon" />
       </div>
       <div className="header_nav">
         <div className="nav_item">
@@ -24,13 +27,15 @@ function Header() {
           <span className="nav_itemLineOne">Your</span>
           <span className="nav_itemLineTwo">Shop</span>
         </div>
-        <div className="nav_itemBasket">
-          <ShoppingBasketIcon />
-          <span className="nav_itemLineTwo nav_basketCount">0</span>
-        </div>
+        <a href="/checkout" style={{ textDecoration: "none" }}>
+          <div className="nav_itemBasket">
+            <ShoppingBasketIcon />
+            <span className="nav_itemLineTwo nav_basketCount">0</span>
+          </div>
+        </a>
       </div>
-        </div>
-    )
+    </div>
+  );
 }
 
 export default Header;
